@@ -39,15 +39,45 @@ module.exports = function(grunt) {
         all: {
             src: ['test/*.js']
         }
+    },
+    clean: {
+        tests: {
+            force: true,
+            src: [
+                'test/tmp'
+            ]
+        },
+        docs: {
+            force: true,
+            src: [
+                'doc/*'
+            ]
+        }
+    },
+    jsdoc : {
+        dist : {
+            src: [
+                'README.md',
+                'lib/*.js',
+                'lib/**/*.js'
+            ],
+            options: {
+                destination: 'doc'
+            }
+        }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-jsdoc');
 
   // Custom tasks
   grunt.registerTask('check', ['jshint']);
-  grunt.registerTask('test', ['simplemocha']);
+  grunt.registerTask('test', ['clean:tests', 'simplemocha']);
+  grunt.registerTask('docs', ['clean:docs', 'jsdoc']);
 
   // Default task
   grunt.registerTask('default', ['check']);
