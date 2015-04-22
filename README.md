@@ -1,8 +1,8 @@
 # xinara cli client
 
-This is the client of xirama (Xinara Is Not Another Recursive Acronym).
+This is the client of xinara (Xinara Is Not Another Recursive Acronym).
 
-Xirama is a solution for your groupal, and one-to-one privacy comunication, this 
+Xinara is a solution for your groupal, and one-to-one privacy comunication, this 
 client manages a personal wallet of PGP keys and use it to cipher messages to
 another persons, the message are sends to servers that distributte the messages
 with all clients, but only the choose ones can read this messajes.
@@ -47,9 +47,9 @@ You could help us forking this repository and sending Pull Requests :-)
 
 ## By NPM
 
-You can install xirama with [npm](https://www.npmjs.com/) typing:
+You can install xinara with [npm](https://www.npmjs.com/) typing:
 
-    $ sudo npm install -g xirama-cli
+    $ sudo npm install -g xinara-cli
 
 ## By source code
 
